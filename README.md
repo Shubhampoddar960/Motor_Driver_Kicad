@@ -1,4 +1,4 @@
-# \# 🚗⚡ L298N Motor Driver (KiCad)
+1. \# 🚗⚡ L298N Motor Driver (KiCad)
 
 # 
 
@@ -210,3 +210,54 @@
 
 # ⭐ If you find this project useful, consider giving it a star!
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+2. ⚙️ TB6612FNG Motor Driver Board
+
+A compact dual DC motor driver board designed in **KiCad**, built around the **TB6612FNG** driver IC. It includes reverse polarity protection and proper supply filtering, which makes it a good fit for robotics projects such as line followers and small robots. 🤖
+
+---
+
+## ✨ Features
+
+- 🔌 Drives **2 DC motors** independently (Channel A and Channel B)
+- 🛡️ **Reverse polarity protection** using a PMOS (Q1)
+- 🔋 Motor supply filtering (10 µF + 0.1 µF)
+- 🧠 Logic supply decoupling (0.1 µF)
+- 🌍 Large **GND copper pour** for good return paths and noise reduction
+- 📌 Simple headers: one for signals, one for power and motors
+- 🔄 Standby (STBY) pin to put the driver to sleep and save power
+
+---
+
+## 🧩 Specifications (TB6612FNG)
+
+| Parameter | Value |
+|---|---|
+| ⚡ Motor supply (VMOT) | 4.5 V – 13.5 V |
+| 🧠 Logic supply (VCC) | 2.7 V – 5.5 V |
+| 🔁 Continuous current per channel | 1.2 A (3.2 A peak) |
+| 🎚️ PWM frequency | Up to 100 kHz |
+
+---
+
+## 📌 Pinout
+
+### 🔹 J1 – Signal Header (7 pins)
+
+| Pin | Signal | Description |
+|---|---|---|
+| 1 | AIN1 | Motor A direction input 1 |
+| 2 | AIN2 | Motor A direction input 2 |
+| 3 | PWMA | Motor A speed (PWM) |
+| 4 | BIN1 | Motor B direction input 1 |
+| 5 | BIN2 | Motor B direction input 2 |
+| 6 | PWMB | Motor B speed (PWM) |
+| 7 | STBY | Standby (HIGH = enabled) |
+
+### 🔹 J2 – Power & Motor Header (7 pins)
+
+| Pin | Signal | Description |
+|---|---|---|
+| 1 | VMOT | Battery / motor
